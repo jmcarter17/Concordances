@@ -15,7 +15,7 @@ Here are the commands to run on the terminal (steps to compile and run this from
 8. `./tests/ConcordancesTests` (Optional : to Run tests) 
 9. `./Concordances` (to run executable)
 9a. `../files/smallPoem.txt` (on prompt, to write the name of a file)
-10 `cat ../files/smallPoem.txt` (to display the content of the file on the terminal)
+10. `cat ../files/smallPoem.txt` (to display the content of the file on the terminal)
 
 To test with another file, create a new file in the "files" directory, and then,
 when running the executable `./Concordances`, on prompt enter `../files/newFileName`.
