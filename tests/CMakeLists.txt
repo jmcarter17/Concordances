@@ -5,9 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(../lib)
 set(Main main.cpp)
-set(Sources
-    ConcordanceParser.test.cpp
-        )
+set(Sources ConcordanceParser.test.cpp )
 
 add_subdirectory(vendor/catch)
 

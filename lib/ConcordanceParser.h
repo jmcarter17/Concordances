@@ -22,8 +22,8 @@ private:
   std::map<std::string, std::vector<int>> concordanceMap; // [word, lineOccurances]
 
   void parseLine(int lineNumber, const std::string& line);
-  void removePunctuation(std::string & word) const;
-  void tolowercase(std::string &word) const;
+  void removePunctuation(std::string& word) const;
+  void tolowercase(std::string& word) const;
 };
 
 #endif // CONCORDANCES_CONCORDANCEPARSER_H

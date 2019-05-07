@@ -1,6 +1,7 @@
 #include "catch2/catch.hpp"
 #include "ConcordanceParser.h"
 #include <sstream>
+#include <fstream>
 
 
 TEST_CASE("Simple Sentences") {
@@ -17,3 +18,17 @@ TEST_CASE("Multiple Sentences") {
   CHECK(ConcordanceParser{"Hello.\nHello.\n Hello, Joe."}.getConcordance() == "hello\t{3:1,2,3}\njoe\t{1:3}\n");
 }
 
+TEST_CASE("From File") {
+  std::ifstream file("../../files/smallPoem.txt", std::ios::in);
+  CHECK(ConcordanceParser{std::move(file)}.getConcordance() == "and\t{1:4}\n"
+                                                               "are\t{3:1,2,4}\n"
+                                                               "blue\t{1:2}\n"
+                                                               "heart\t{1:3}\n"
+                                                               "is\t{1:3}\n"
+                                                               "my\t{1:3}\n"
+                                                               "red\t{2:1,3}\n"
+                                                               "roses\t{1:1}\n"
+                                                               "so\t{1:4}\n"
+                                                               "violets\t{1:2}\n"
+                                                               "you\t{1:4}\n");
+}

@@ -45,9 +45,9 @@ void ConcordanceParser::parseLine(int lineNumber, const std::string& line) {
     }
   }
 }
-void ConcordanceParser::tolowercase(std::string &word) const {
+void ConcordanceParser::tolowercase(std::string& word) const {
   std::transform(word.begin(), word.end(), word.begin(), ::tolower);
 }
-void ConcordanceParser::removePunctuation(std::string & word) const {
+void ConcordanceParser::removePunctuation(std::string& word) const {
   word.erase(std::remove_if(word.begin(), word.end(), ispunct), word.end());
 }
